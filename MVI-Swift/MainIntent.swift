@@ -32,7 +32,7 @@ class MainIntent {
         let next = heroSelector.isNextHeroAvailable()
         let previous = heroSelector.isPreviousHeroAvailable()
 
-        stateRelay.accept(HeroState.HeroPresenting(withHero: hero,
+        stateRelay.accept(HeroPresenting(withHero: hero,
                                                    nextAvailable: next,
                                                    previousAvailable: previous))
     }
@@ -48,7 +48,7 @@ class MainIntent {
     }
     
     public func onSelectCharacter() {
-        stateRelay.accept(HeroState.HeroSelected(selectedHero: heroSelector.currentHero))
+        stateRelay.accept(HeroSelected(selectedHero: heroSelector.currentHero))
     }
     
     public func onDismissCharacter() {
@@ -58,7 +58,7 @@ class MainIntent {
     private func presentHero(hero: Hero) {
         let next = heroSelector.isNextHeroAvailable()
         let previous = heroSelector.isPreviousHeroAvailable()
-        stateRelay.accept(HeroState.HeroPresenting(withHero: hero,
+        stateRelay.accept(HeroPresenting(withHero: hero,
         nextAvailable: next,
         previousAvailable: previous))
     }

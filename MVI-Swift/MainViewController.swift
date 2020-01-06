@@ -43,12 +43,12 @@ class MainViewController: UIViewController {
     
     public func update(withState state: HeroState) {
         switch state {
-        case is HeroState.HeroPresenting:
-            let heroState = state as! HeroState.HeroPresenting
+        case is HeroPresenting:
+            let heroState = state as! HeroPresenting
             showPresentState(withPresentState: heroState)
             break
-        case is HeroState.HeroSelected:
-            let heroState = state as! HeroState.HeroSelected
+        case is HeroSelected:
+            let heroState = state as! HeroSelected
             showSelectedState(withHeroName: heroState.hero.name)
             break
         default:
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
         }
     }
     
-    private func showPresentState(withPresentState state: HeroState.HeroPresenting) {
+    private func showPresentState(withPresentState state: HeroPresenting) {
         let hero = state.hero
         nameLabel.text = hero.name
         imageView.image = UIImage(named: hero.name)
