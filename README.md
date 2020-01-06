@@ -3,7 +3,7 @@ A simple approach on MVI with Swift under iOS using a demo hero selection App
 
 
 ## Images
-All images used in this repository are taken from the internet.
+Some images used in this repository are taken from the internet.
 All rights belong to their authors. 
 Character designs are copyright under the terms of the responding companies.
 
