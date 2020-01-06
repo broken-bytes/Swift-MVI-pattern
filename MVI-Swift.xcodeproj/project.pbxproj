@@ -14,7 +14,6 @@
 		036E8A1C23C2BC9000AAFBB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 036E8A1B23C2BC9000AAFBB0 /* Assets.xcassets */; };
 		036E8A1F23C2BC9000AAFBB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036E8A1D23C2BC9000AAFBB0 /* LaunchScreen.storyboard */; };
 		036E8A2723C2BD7500AAFBB0 /* MainIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036E8A2623C2BD7500AAFBB0 /* MainIntent.swift */; };
-		036E8A2923C2BDBF00AAFBB0 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036E8A2823C2BDBF00AAFBB0 /* State.swift */; };
 		036E8A3023C2D93C00AAFBB0 /* HeroSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036E8A2F23C2D93C00AAFBB0 /* HeroSelector.swift */; };
 		036E8A3223C2D96A00AAFBB0 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036E8A3123C2D96A00AAFBB0 /* Hero.swift */; };
 		036E8A3623C2E50900AAFBB0 /* HeroState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036E8A3523C2E50900AAFBB0 /* HeroState.swift */; };
@@ -31,7 +30,6 @@
 		036E8A1E23C2BC9000AAFBB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		036E8A2023C2BC9000AAFBB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036E8A2623C2BD7500AAFBB0 /* MainIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntent.swift; sourceTree = "<group>"; };
-		036E8A2823C2BDBF00AAFBB0 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		036E8A2F23C2D93C00AAFBB0 /* HeroSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSelector.swift; sourceTree = "<group>"; };
 		036E8A3123C2D96A00AAFBB0 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		036E8A3523C2E50900AAFBB0 /* HeroState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroState.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				036E8A1D23C2BC9000AAFBB0 /* LaunchScreen.storyboard */,
 				036E8A2023C2BC9000AAFBB0 /* Info.plist */,
 				036E8A2623C2BD7500AAFBB0 /* MainIntent.swift */,
-				036E8A2823C2BDBF00AAFBB0 /* State.swift */,
 				036E8A3523C2E50900AAFBB0 /* HeroState.swift */,
 			);
 			path = "MVI-Swift";
@@ -227,7 +224,6 @@
 				036E8A3223C2D96A00AAFBB0 /* Hero.swift in Sources */,
 				036E8A1323C2BC8700AAFBB0 /* AppDelegate.swift in Sources */,
 				036E8A2723C2BD7500AAFBB0 /* MainIntent.swift in Sources */,
-				036E8A2923C2BDBF00AAFBB0 /* State.swift in Sources */,
 				036E8A1523C2BC8700AAFBB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
