@@ -9,5 +9,7 @@ Character designs are copyright under the terms of the responding companies.
 
 Links:
 https://nier.fandom.com/wiki/YoRHa_No.2_Type_B
+
 https://dragonballwiki.de/wiki/Son-Goku
+
 https://www.deviantart.com/n4pcroft/art/TOMB-RAIDER-Transparent-Render-211403079
