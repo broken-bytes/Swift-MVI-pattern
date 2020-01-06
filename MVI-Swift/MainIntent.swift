@@ -47,6 +47,14 @@ class MainIntent {
         presentHero(hero: hero)
     }
     
+    public func onSelectCharacter() {
+        stateRelay.accept(HeroState.HeroSelected(selectedHero: heroSelector.currentHero))
+    }
+    
+    public func onDismissCharacter() {
+        presentHero(hero: heroSelector.currentHero)
+    }
+    
     private func presentHero(hero: Hero) {
         let next = heroSelector.isNextHeroAvailable()
         let previous = heroSelector.isPreviousHeroAvailable()

@@ -21,33 +21,57 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var previousCharacter: UIButton!
     @IBOutlet weak var nextCharacter: UIButton!
+    @IBOutlet weak var selectCharacter: UIButton!
+    
     // MARK: Properties
     private let intent = MainIntent()
     private let disposeBag = DisposeBag()
+    
+    var selectedAlert: UIAlertController?
         
     // MARK: Inits
     override func viewDidLoad() {
         super.viewDidLoad()
         bindButtons()
         intent.bind(toView: self)
+        selectedAlert = UIAlertController(title: "You selected",
+                                          message: "",
+                                          preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Dismiss", style: .cancel) { _ in self.intent.onDismissCharacter() }
+        selectedAlert?.addAction(dismiss)
     }
     
     public func update(withState state: HeroState) {
         switch state {
         case is HeroState.HeroPresenting:
             let heroState = state as! HeroState.HeroPresenting
-            let hero = heroState.hero
-            nameLabel.text = hero.name
-            imageView.image = UIImage(named: hero.name)
-            speed.progress = hero.speed / 10
-            power.progress = hero.power / 10
-            stamina.progress = hero.stamina / 10
+            showPresentState(withPresentState: heroState)
             break
         case is HeroState.HeroSelected:
+            let heroState = state as! HeroState.HeroSelected
+            showSelectedState(withHeroName: heroState.hero.name)
             break
         default:
             break
         }
+    }
+    
+    private func showPresentState(withPresentState state: HeroState.HeroPresenting) {
+        let hero = state.hero
+        nameLabel.text = hero.name
+        imageView.image = UIImage(named: hero.name)
+        speed.progress = hero.speed / 10
+        power.progress = hero.power / 10
+        stamina.progress = hero.stamina / 10
+        
+        nextCharacter.isEnabled = state.nextAvailable
+        previousCharacter.isEnabled = state.previousAvailable
+    }
+    
+    private func showSelectedState(withHeroName name: String) {
+        guard let alert = selectedAlert else { return }
+        alert.message = name
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: Methods
@@ -58,6 +82,10 @@ class MainViewController: UIViewController {
         
         nextCharacter.rx.tap.bind {
             self.intent.onNextCharacterClicked()
+        }.disposed(by: disposeBag)
+        
+        selectCharacter.rx.tap.bind {
+            self.intent.onSelectCharacter()
         }.disposed(by: disposeBag)
     }
     

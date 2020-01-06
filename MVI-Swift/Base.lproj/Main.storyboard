@@ -153,6 +153,7 @@
                         <outlet property="nextCharacter" destination="iOn-Zg-4MJ" id="J9e-np-VMM"/>
                         <outlet property="power" destination="yQt-pk-dSR" id="hhI-4y-UUq"/>
                         <outlet property="previousCharacter" destination="HFM-cb-lSn" id="h2h-Qk-mHC"/>
+                        <outlet property="selectCharacter" destination="7Bu-gR-68E" id="wVo-n4-WLZ"/>
                         <outlet property="speed" destination="V8V-BQ-q5b" id="RKp-i0-qJW"/>
                         <outlet property="stamina" destination="Lb0-TO-bAZ" id="Fo9-2Z-pYT"/>
                     </connections>
